@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+<body>
+    <script>
+        function checkAge(age){
+            return age > 18 ? true : confirm('보호자의 동의를 받으셨나요?'); 
+        }
+        
+        function checkage(age){
+            return (age>18) || confirm('보호자의 동의를 받으셨나요?');
+        }
+
+       // checkage(17);
+
+        function min(a,b){
+            return alert( a>=b ? b : a );
+        }
+
+        //min(1,1);
+
+        function pow(x,n){
+            let t=1;
+            for(let i=1; i<=n;i++){
+                t=t*x;
+                }
+                return t;
+        }
+        let A = prompt('거듭제곱할 수를 입력하세요');
+        let B = prompt('지수를 입력하세요');
+        alert (pow(A,B));
+    </script>
+</body>
+</html>
