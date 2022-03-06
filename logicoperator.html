@@ -5,11 +5,11 @@
     </head>    
 <body>
     <script>
-        /*alert(null || 2 || undefined); //2
+        /*alert(null || 2 || undefined); //2  첫번째 truety 찾아줌.
         alert(alert(1) || 2 || alert(3)); //1 --> 2
-        alert(1 && null && 2); //null
+        alert(1 && null && 2); //null  첫번째 falsy 찾아줌
         alert(alert(1) && alert(2)); //1 --> undefined alert은 어떤 값이 아닌 false이기에 
-        alert(null || 2 && 3 || 4); //3 */
+        alert(null || 2 && 3 || 4); //3 &&>|| */
         let age = +prompt('나이를 입력하세요.');
         if (!(age>=14 && age<=90)){
             alert('해당하는 나이와 일치합니다');
