@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+<body>
+    <script>
+        let A=['Jazz', 'Blues'];
+        A.push('Rock-n-Roll');
+        A.splice(1,1,'Classics');
+        A.shift();
+        A.unshift('Rap', 'Reggae');
+        alert(A);
+
+        let arr = ['a','b'];
+
+        arr.push(function(){
+            alert(this); 
+        }) //this가 무엇?
+        arr[2]();
+
+        function sumInput(){
+            let sum=[];
+            for(let i=1 ; ; ){
+            i= prompt("숫자를 입력하세요");
+            if(i=="" || i==null || isFinite(i)!=true){ //isFinte()는 숫자인지 판단/isNan()문자인지 판단
+                break;
+            }
+            sum.push(+i);
+            }
+
+            let A=0;
+            for(let j of sum){
+                A=A+j;
+            }
+            return A;
+        }
+
+        alert(sumInput());
+
+        function getMaxSubSum(arr){
+            let maxsum=0;
+            let partialsum=0;
+
+            for(let i of arr){
+                partialsum += i;
+                maxsum = Math.max(maxsum,partialsum);
+                if(partialsum<0){
+                    partialsum=0;
+                }
+               
+            }
+            return maxsum;
+        }
+
+        alert(getMaxSubSum([-1,2,3,-9]));
+
+        
+    </script>
+</body>
+</html>
+
